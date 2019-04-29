@@ -1,6 +1,7 @@
 angular.module('loginModule', ['loginRouterModule'])
-    .controller('loginCtrl',['$scope',function($scope){
-
+    .controller('loginCtrl',['$scope', 'defaults', function($scope,defaults){
+        $scope.defaults = defaults;
+        console.log($scope.defaults)
 }]);
 angular.module('loginRouterModule', []).config(['$stateProvider',
     function($stateProvider){
@@ -13,4 +14,4 @@ angular.module('loginRouterModule', []).config(['$stateProvider',
                 }
             }
         })
-    }])
+    }]);
