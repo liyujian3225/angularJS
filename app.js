@@ -8,7 +8,8 @@ let app = angular.module('myApp',[
     'validation',
     'validation.rule',
     'appRouterModule',
-    'loginModule'
+    'loginModule',
+    'myResumeModule'
 ]).constant('defaults',{
     //当我们想要创建一个服务时，并且这个服务只需要返回数据时，就可以用constant(name,value)和value(name,value)
     //value不可以在config里注入，但是constant可以
@@ -152,6 +153,6 @@ let app = angular.module('myApp',[
 }]);
 angular.module('appRouterModule', []).config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise('/login')
+        $urlRouterProvider.otherwise('/myResume')
 }]);
 
